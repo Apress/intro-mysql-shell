@@ -1,0 +1,35 @@
+{#
+  Introducing the MySQL Shell
+  
+  This template defines the book template for use in the MyGarage application
+  using the base template.
+  
+  Dr. Charles Bell, 2019
+#}
+{% extends "base.html" %}
+{% block title %}MyGarage Search{% endblock %}
+{% block page_content %}
+  <form method=post> {{ form.csrf_token }}
+    <fieldset>
+      <legend>Powertool - Detail</legend>
+      {{ form.hidden_tag() }}
+      <div style=font-size:20pz; font-weight:bold; margin-left:150px;> 
+        {{ form.vendor.label }} <br>
+        {{ form.vendor(style="width: 200px;") }} <br>
+        {{ form.description.label }} <br>
+        {{ form.description(size=100) }} <br>
+        {{ form.powertooltype.label }} <br>
+        {{ form.powertooltype(style="width: 140px;") }} <br>
+        {{ form.place.label }} <br>
+        {{ form.place(style="width: 600px;") }} <br>
+        <br>
+        {{ form.create_button }} 
+        {% if form.del_button %}
+          {{ form.del_button }}
+        {% endif %}
+        {{ form.close_button }}
+        <br><br>
+      </div>
+    </fieldset>  
+  </form>  
+{% endblock %}  

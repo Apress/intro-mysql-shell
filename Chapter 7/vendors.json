@@ -1,0 +1,210 @@
+{
+    "_id": "00005cc4bca00000000000000176",
+    "name": "Kobalt",
+    "sources": "Lowes",
+    "url": "https://www.kobalttools.com/"
+}
+{
+    "_id": "00005cc4bca00000000000000177",
+    "name": "Craftsman",
+    "sources": "Lowes, Ace",
+    "url": "https://www.craftsman.com/"
+}
+{
+    "_id": "00005cc4bca00000000000000178",
+    "name": "Irwin",
+    "sources": "Lowes",
+    "url": "https://www.irwin.com/"
+}
+{
+    "_id": "00005cc4bca00000000000000179",
+    "name": "Snapon",
+    "sources": null,
+    "url": "https://www.snapon.com/EN"
+}
+{
+    "_id": "00005cc4bca0000000000000017a",
+    "name": "Blue Hawk",
+    "sources": "Lowes",
+    "url": "http://www.lowes.com"
+}
+{
+    "_id": "00005cc4bca0000000000000017b",
+    "name": "Vaughan",
+    "sources": "Lowes",
+    "url": "http://www.lowes.com"
+}
+{
+    "_id": "00005cc4bca0000000000000017c",
+    "name": "Eastwing",
+    "sources": "Lowes",
+    "url": "http://www.lowes.com"
+}
+{
+    "_id": "00005cc4bca0000000000000017d",
+    "name": "General Tools & Instruments",
+    "sources": "Lowes",
+    "url": "http://www.lowes.com"
+}
+{
+    "_id": "00005cc4bca0000000000000017e",
+    "name": "Southwire",
+    "sources": "Lowes",
+    "url": "http://www.lowes.com"
+}
+{
+    "_id": "00005cc4bca0000000000000017f",
+    "name": "GearWrench",
+    "sources": "Lowes",
+    "url": "http://www.lowes.com"
+}
+{
+    "_id": "00005cc4bca00000000000000180",
+    "name": "Bostitch",
+    "sources": "Lowes",
+    "url": "http://www.lowes.com"
+}
+{
+    "_id": "00005cc4bca00000000000000181",
+    "name": "Hitachi",
+    "sources": "Lowes",
+    "url": "http://www.lowes.com"
+}
+{
+    "_id": "00005cc4bca00000000000000182",
+    "name": "Johnson",
+    "sources": "Lowes",
+    "url": "http://www.lowes.com"
+}
+{
+    "_id": "00005cc4bca00000000000000183",
+    "name": "Skil",
+    "sources": "Lowes",
+    "url": "http://www.lowes.com"
+}
+{
+    "_id": "00005cc4bca00000000000000184",
+    "name": "Dewalt",
+    "sources": "Lowes",
+    "url": "http://www.lowes.com"
+}
+{
+    "_id": "00005cc4bca00000000000000185",
+    "name": "Porter-Cable",
+    "sources": "Lowes",
+    "url": "http://www.lowes.com"
+}
+{
+    "_id": "00005cc4bca00000000000000186",
+    "name": "Bosch",
+    "sources": "Lowes",
+    "url": "http://www.lowes.com"
+}
+{
+    "_id": "00005cc4bca00000000000000187",
+    "name": "Dremel",
+    "sources": "Lowes",
+    "url": "http://www.lowes.com"
+}
+{
+    "_id": "00005cc4bca00000000000000188",
+    "name": "Stanley",
+    "sources": "Lowes, Ace",
+    "url": "http://www.lowes.com"
+}
+{
+    "_id": "00005cc4bca00000000000000189",
+    "name": "Chicago Electric",
+    "sources": "HarborFright",
+    "url": "https://www.harborfreight.com/"
+}
+{
+    "_id": "00005cc4bca0000000000000018a",
+    "name": "Self",
+    "sources": "Various",
+    "url": "DIY"
+}
+{
+    "_id": "00005cc4bca0000000000000018b",
+    "name": "Central Machinery",
+    "sources": "HarborFright",
+    "url": "https://www.harborfreight.com/"
+}
+{
+    "_id": "00005cc4bca0000000000000018c",
+    "name": "ACME Bolt Company",
+    "sources": "looney toons",
+    "url": "www.acme.org"
+}
+{
+    "_id": "00005cc4bca0000000000000018d",
+    "name": "ACME Nut Company",
+    "sources": "looney toons",
+    "url": "www.acme.org"
+}
+{
+    "_id": "00005cc4bca0000000000000018e",
+    "name": "ACME Bolt Company",
+    "sources": "looney toons",
+    "url": "www.acme.org"
+}
+{
+    "_id": "00005cc4bca0000000000000018f",
+    "name": "ACME Bolt Company",
+    "sources": "looney toons",
+    "url": "www.acme.org"
+}
+{
+    "_id": "00005cc4bca00000000000000190",
+    "name": "ACME Bolt Company",
+    "sources": "looney toons",
+    "url": "www.acme.org"
+}
+{
+    "_id": "00005cc4bca00000000000000191",
+    "name": "ACME Bolt Company",
+    "sources": "looney toons",
+    "url": "www.acme.org"
+}
+{
+    "_id": "00005cc4bca00000000000000192",
+    "name": "ACME Bolt Company",
+    "sources": "looney toons",
+    "url": "www.acme.org"
+}
+{
+    "_id": "00005cc4bca00000000000000193",
+    "name": "ACME Nut Company",
+    "sources": "looney toons",
+    "url": "www.acme.org"
+}
+{
+    "_id": "00005cc4bca00000000000000194",
+    "name": "ACME Bolt Company",
+    "sources": "looney toons",
+    "url": "www.acme.org"
+}
+{
+    "_id": "00005cc4bca00000000000000195",
+    "name": "ACME Bolt Company",
+    "sources": "looney toons",
+    "url": "www.acme.org"
+}
+{
+    "_id": "00005cc4bca00000000000000196",
+    "name": "ACME Bolt Company",
+    "sources": "looney toons",
+    "url": "www.acme.org"
+}
+{
+    "_id": "00005cc4bca00000000000000197",
+    "name": "ACME Bolt Company",
+    "sources": "looney toons",
+    "url": "www.acme.org"
+}
+{
+    "_id": "00005cc4bca00000000000000198",
+    "name": "ACME Nut Company",
+    "sources": "looney toons",
+    "url": "www.acme.org"
+}

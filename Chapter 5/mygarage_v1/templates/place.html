@@ -1,0 +1,38 @@
+{#
+  Introducing the MySQL Shell
+  
+  This template defines the author template for use in the MyGarage application
+  using the base template.
+  
+  Dr. Charles Bell, 2019
+#}
+{% extends "base.html" %}
+{% block title %}MyGarage Search{% endblock %}
+{% block page_content %}
+  <form method=post> {{ form.csrf_token }}
+    <fieldset>
+      <legend>Storage Places - Detail</legend>
+      {{ form.hidden_tag() }}
+      <div style=font-size:20pz; font-weight:bold; margin-left:150px;s> 
+        {{ form.placetype.label }} <br>
+        {{ form.placetype(style="width: 140px;") }} <br>
+        {{ form.storage.label }} <br>
+        {{ form.storage(style="width: 500px;") }} <br>
+        {{ form.description.label }} <br>
+        {{ form.description(size=50) }} <br>
+        {{ form.width.label }} <br>
+        {{ form.width(size=10) }} <br>
+        {{ form.depth.label }} <br>
+        {{ form.depth(size=10) }} <br>
+        {{ form.height.label }} <br>
+        {{ form.height(size=10) }} <br>
+        <br>
+        {{ form.create_button }}
+        {% if form.del_button %}
+          {{ form.del_button }}
+        {% endif %}  
+        {{ form.close_button }}
+      </div>
+    </fieldset>  
+  </form>  
+{% endblock %}  

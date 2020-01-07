@@ -1,0 +1,57 @@
+{#
+  Introducing the MySQL Shell
+  
+  This template defines the base template used for all of the HTML forms and
+  responses in the MyGarage application. It also defines the menu for the
+  basic operations.
+  
+  Dr. Charles Bell, 2019
+#}
+{% extends "bootstrap/base.html" %}
+{% block title %}MyGarage{% endblock %}
+{% block navbar %}
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">MyGarage v1</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/list/handtool">Handtools</a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li><a href="/list/powertool">Powertools</a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li><a href="/list/organizer">Organizers</a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li><a href="/list/storage">Storage Equipment</a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li><a href="/list/place">Storage Places</a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li><a href="/list/vendor">Vendors</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    {% for message in get_flashed_messages() %}
+    <div class="alert alert-warning">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{ message }}
+    </div>
+    {% endfor %}
+
+    {% block page_content %}{% endblock %}
+</div>
+{% endblock %}

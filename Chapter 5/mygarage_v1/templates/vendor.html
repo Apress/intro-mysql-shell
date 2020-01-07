@@ -1,0 +1,32 @@
+{#
+  Introducing the MySQL Shell - MyGarage Version 1
+  
+  This template defines the vendor template for use in the MyGarage application
+  using the base template.
+  
+  Dr. Charles Bell, 2019
+#}
+{% extends "base.html" %}
+{% block title %}MyGarage Search{% endblock %}
+{% block page_content %}
+  <form method=post> {{ form.csrf_token }}
+    <fieldset>
+      <legend>Vendor - Detail</legend>
+      {{ form.hidden_tag() }}
+      <div style=font-size:20pz; font-weight:bold; margin-left:150px;s> 
+        {{ form.name.label }} <br>
+        {{ form.name(size=50) }} <br>
+        {{ form.url.label }} <br>
+        {{ form.url(size=100) }} <br>
+        {{ form.sources.label }} <br>
+        {{ form.sources(size=40) }} <br>
+        <br>
+        {{ form.create_button }}
+        {% if form.del_button %}
+          {{ form.del_button }}
+        {% endif %}
+        {{ form.close_button }}
+      </div>
+    </fieldset>  
+  </form>  
+{% endblock %}  

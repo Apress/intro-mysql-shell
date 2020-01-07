@@ -1,0 +1,1 @@
+SELECT Name, Code, Language FROM world_x.Country JOIN world_x.CountryLanguage ON Country.Code = CountryLanguage.CountryCode LIMIT 10;

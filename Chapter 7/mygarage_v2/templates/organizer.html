@@ -1,0 +1,60 @@
+{#
+  Introducing the MySQL Shell - MyGarage Version 2
+
+  This template defines the author template for use in the MyGarage application
+  using the base template.
+
+  Dr. Charles Bell, 2019
+#}
+{% extends "base.html" %}
+{% block title %}MyGarage Search{% endblock %}
+{% block page_content %}
+  <form method=post> {{ form.csrf_token }}
+    <fieldset>
+      <legend>Organizer - Detail</legend>
+      {{ form.hidden_tag() }}
+      <div style=font-size:20pz; font-weight:bold; margin-left:150px;s>
+        {{ form.location.label }} <br>
+        {{ form.location(style="width: 500px;") }} <br>
+        {{ form.description.label }} <br>
+        {{ form.description(size=100) }} <br>
+        {{ form.organizertype.label }} <br>
+        {{ form.organizertype(style="width: 140px;") }} <br>
+        {{ form.width.label }} <br>
+        {{ form.width(size=10) }} <br>
+        {{ form.depth.label }} <br>
+        {{ form.depth(size=10) }} <br>
+        {{ form.height.label }} <br>
+        {{ form.height(size=10) }} <br>
+        <br>
+        {{ form.create_button }}
+        {% if form.del_button %}
+          {{ form.del_button }}
+        {% endif %}
+        {{ form.close_button }}
+        {# Show the list of tools. #}
+        {% if tools %}
+          <br>
+          <b>Tools in {{ form.organizertype.label }} </b>
+          <br>
+          <table border="1" cellpadding="1" cellspacing="1">
+            <tr>
+              <td style="width:80px"><b>Action</b></td>
+              {% for col in tool_columns %}
+                {{ col|safe }}
+              {% endfor %}
+            </tr>
+            {% for row in tools %}
+              <tr>
+               <td><a href="{{ '/tools/%s'%(row[0]) }}">Modify/View</a></td>
+               {% for col in row[1:] %}
+                  <td> {{ col }} </td>
+                {% endfor %}
+              </tr>
+            {% endfor %}
+          </table>
+        {% endif %}
+      </div>
+    </fieldset>
+  </form>
+{% endblock %}

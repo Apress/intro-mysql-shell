@@ -1,0 +1,1 @@
+mysqlsh --uri=root@localhost:3306 --sql --table -e "SELECT Name, District, Info FROM world_x.city WHERE CountryCode = 'USA' AND JSON_EXTRACT(Info, '$.Population') > 500000 ORDER BY Name DESC LIMIT 10;"

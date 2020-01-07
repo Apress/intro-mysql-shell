@@ -1,0 +1,12 @@
+UPDATE factory_sensors.trailer_assembly SET sensor_name = 'trailer_weight' WHERE sensor_name = 'gross_weight';
+INSERT INTO factory_sensors.trailer_assembly (sensor_name, sensor_value, sensor_units) VALUES ('gross_weight', 1250.00, 'pounds');
+INSERT INTO factory_sensors.trailer_assembly (sensor_name, sensor_value, sensor_units) VALUES ('gross_weight', 1235.00, 'pounds');
+INSERT INTO factory_sensors.trailer_assembly (sensor_name, sensor_value, sensor_units) VALUES ('gross_weight', 1266.00, 'pounds');
+INSERT INTO factory_sensors.trailer_assembly (sensor_name, sensor_value, sensor_units) VALUES ('gross_weight', 1242.00, 'pounds');
+SELECT sensor_name, sensor_value FROM factory_sensors.trailer_assembly WHERE sensor_name = 'gross_weight';
+SELECT sensor_name, AVG(sensor_value) as avg_value FROM factory_sensors.trailer_assembly WHERE sensor_name = 'gross_weight' GROUP BY sensor_name;
+SELECT sensor_name, sensor_value FROM factory_sensors.trailer_assembly WHERE sensor_name = 'gross_weight' ORDER BY sensor_value ASC;
+SELECT sensor_name, sensor_value FROM factory_sensors.trailer_assembly WHERE sensor_name = 'gross_weight' ORDER BY sensor_value DESC;
+SELECT sensor_value AS min FROM factory_sensors.trailer_assembly WHERE sensor_name = 'gross_weight' ORDER BY sensor_value ASC LIMIT 1;
+SELECT sensor_value as max FROM factory_sensors.trailer_assembly WHERE sensor_name = 'gross_weight' ORDER BY sensor_value DESC LIMIT 1;
+SELECT sensor_name, COUNT(sensor_value) as num_values FROM factory_sensors.trailer_assembly GROUP BY sensor_name;

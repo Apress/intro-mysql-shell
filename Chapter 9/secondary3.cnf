@@ -1,0 +1,34 @@
+[mysqld]
+datadir="/Users/cbell/gr/data/secondary3"
+basedir="/usr/local/mysql-8.0.16-macos10.14-x86_64/"
+plugin_dir=/usr/local/mysql/lib/plugin/
+plugin-load=group_replication.so
+port=24804
+mysqlx-port=33064
+mysqlx-socket="/Users/cbell/rpl/secondary3x.sock"
+socket="/Users/cbell/rpl/data/secondary3.sock"
+server_id=104
+master_info_repository=TABLE
+relay_log_info_repository=TABLE
+log_bin=slave1_binlog
+binlog_format=row
+report-port=24903
+report-host=localhost
+
+# GTID VARIABLES
+gtid_mode=ON
+enforce_gtid_consistency=ON
+log_slave_updates=ON
+binlog_checksum=NONE
+
+# GR VARIABLES
+group_replication_recovery_get_public_key=ON
+group_replication_recovery_use_ssl=ON
+group_replication_group_name="bbbbbbbb-bbbb-cccc-dddd-eeeeeeeeeeee"
+group_replication_start_on_boot=OFF
+group_replication_local_address="127.0.0.1:24904"
+group_replication_group_seeds="127.0.0.1:24901,127.0.0.1:24902,127.0.0.1:24903,127.0.0.1:24904"
+group_replication_bootstrap_group=OFF
+
+
+

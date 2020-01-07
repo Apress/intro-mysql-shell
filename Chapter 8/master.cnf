@@ -1,0 +1,17 @@
+[mysqld]
+datadir="/Users/cbell/rpl/data/master"
+basedir="/usr/local/mysql-8.0.16-macos10.14-x86_64/"
+port=13001
+mysqlx-port=33061
+mysqlx-socket="/Users/cbell/rpl/masterx.sock"
+socket="/Users/cbell/rpl/master.sock"
+server_id=1
+master_info_repository=TABLE
+relay_log_info_repository=TABLE
+log_bin=master_binlog
+binlog_format=row
+
+# GTID VARIABLES
+gtid_mode=on
+enforce_gtid_consistency=on
+log_slave_updates=on

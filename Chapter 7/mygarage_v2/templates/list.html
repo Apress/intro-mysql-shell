@@ -1,0 +1,42 @@
+{#
+  Introducing the MySQL Shell - MyGarage Version 2
+
+  This template defines the template used for listing items stored
+  in the MyGarage application using the base template.
+
+  Dr. Charles Bell, 2017
+#}
+{% extends "base.html" %}
+{% block title %}MyGarage Find Results{% endblock %}
+{% block page_content %}
+  <form method=post> {{ form.csrf_token }}
+    <fieldset>
+      {{ form.submit }}
+      {% if form.back_button %}
+        {{ form.back_button }}
+      {% endif %}
+      <br><br>
+    </fieldset>
+  </form>
+  <legend>{{ form.form_name.label }}</legend>
+  <table border="1" cellpadding="1" cellspacing="1">
+    <tr>
+      <td style="width:80px"><b>Action</b></td>
+      {% for col in columns %}
+        {{ col|safe }}
+      {% endfor %}
+    </tr>
+    {% for row in rows %}
+      <tr>
+        {% if redirect %}
+          <td><a href="{{ '/%s/%s/%s'%(redirect,kind,row[0]) }}">Modify/View</a></td>
+        {% else %}
+          <td><a href="{{ '/%s/%s'%(kind,row[0]) }}">Modify/View</a></td>
+        {% endif %}
+        {% for col in row[1:] %}
+          <td> {{ col }} </td>
+        {% endfor %}
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

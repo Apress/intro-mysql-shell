@@ -1,0 +1,13 @@
+CREATE DATABASE test_db;
+USE test_db;
+CREATE TABLE test_tbl (id int auto_increment, name char(20), primary key(id));
+INSERT INTO test_tbl VALUES (NULL, 'one');
+INSERT INTO test_tbl VALUES (NULL, 'two');
+INSERT INTO test_tbl VALUES (NULL, 'three');
+SELECT * FROM test_tbl;
+DELETE FROM test_tbl WHERE id = 2;
+SELECT * FROM test_tbl;
+SHOW TABLES;
+SHOW DATABASES;
+SELECT @@version;
+DROP DATABASE test_db;

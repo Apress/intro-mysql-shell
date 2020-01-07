@@ -1,0 +1,75 @@
+{#
+  Introducing the MySQL Shell - MyGarage Version 2
+
+  This template defines the book template for use in the MyGarage application
+  using the base template.
+
+  Dr. Charles Bell, 2019
+#}
+{% extends "base.html" %}
+{% block title %}MyGarage Search{% endblock %}
+{% block page_content %}
+  <form method=post> {{ form.csrf_token }}
+    <fieldset>
+      <legend>{{ form.caption.label }} - Detail</legend>
+      {{ form.hidden_tag() }}
+      <div style=font-size:20pz; font-weight:bold; margin-left:150px;>
+        {{ form.description.label }} <br>
+        {{ form.description(size=100) }} <br>
+        {{ form.vendor.label }} <br>
+        {{ form.vendor(style="width: 200px;") }} <br>
+        {{ form.location.label }} <br>
+        {{ form.location(style="width: 500px;") }} <br>
+        {% if form.numdoors %}
+          {{ form.numdoors.label }} <br>
+          {{ form.numdoors(size=10) }} <br>
+        {% endif %}
+        {{ form.width.label }} <br>
+        {{ form.width(size=10) }} <br>
+        {{ form.depth.label }} <br>
+        {{ form.depth(size=10) }} <br>
+        {{ form.height.label }} <br>
+        {{ form.height(size=10) }} <br>
+        {% if form.manage_tool_locations_button %}
+          <br>
+          {{ form.manage_tool_locations_button }}
+          <br>
+        {% endif %}
+        <br>
+        {{ form.create_button }}
+        {% if form.del_button %}
+          {{ form.del_button }}
+        {% endif %}
+        {{ form.close_button }}
+        <br>
+        {# Show the list of tool locations. #}
+        {% if tool_locations %}
+          <br>
+          <b>Tools in {{ form.caption.label }} </b>
+          <br>
+          {% for place in tool_locations %}
+            <br>
+            <b>{{ place[0] }} - {{ place[1] }}</b>
+            <table border="1" cellpadding="1" cellspacing="1">
+              <tr>
+                <td style="width:80px"><b>Action</b></td>
+                {% for col in tool_locations_columns %}
+                  {{ col|safe }}
+                {% endfor %}
+              </tr>
+              {% for row in place[2] %}
+                <tr>
+                 <td><a href="{{ '/%s/%s'%(kind,row[0]) }}">Modify/View</a></td>
+                 {% for col in row[1:] %}
+                    <td> {{ col }} </td>
+                  {% endfor %}
+                </tr>
+              {% endfor %}
+            </table>
+          {% endfor %}
+        {% endif %}
+        <br>
+      </div>
+    </fieldset>
+  </form>
+{% endblock %}
